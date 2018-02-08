@@ -1,0 +1,46 @@
+name: chat
+version: 0.0.4
+keywords:
+  - chat
+  - realtime
+description: >
+  Realtime Chat Socket. Showcases a basic functionality of communication through
+  the Channels in Syncano.
+endpoints:
+  send_message:
+    description: Publish a message to a Channel
+    parameters:
+      username:
+        type: string
+        description: Name of the User.
+        example: Duke Nukem
+      text:
+        type: string
+        description: Content of the message.
+        example: Damn, am looking good.
+      token:
+        type: string
+        description: >-
+          Arbitrary part of the channel name. Should only contain url friendly
+          characters.
+        example: this_would_work
+    response:
+      success:
+        mimetype: application/json
+        examples:
+          - exit_code: 200
+            description: Successful message publish
+            example: |
+              {
+                "text": "Damn, I'm looking good.",
+                "username": "Duke Nukem",
+                "token": "this_would_work"
+              }
+  realtime:
+    channel: realtime.{token}
+    description: >
+      This is the endpoint your users will subscribe to in order to poll for
+      incoming messages.
+
+      Based on the examples above a user would subscribe to
+      realtime.this_would_work channel.

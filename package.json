@@ -1,0 +1,15 @@
+{
+  "name": "meetup.bialystok.pl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@syncano/cli": "^0.8.0-alpha.b301bf3d"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

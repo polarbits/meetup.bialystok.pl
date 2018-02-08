@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can add new items 1`] = `
+Object {
+  "items": Array [
+    Object {
+      "description": "lorem ipsum dolor",
+      "image": "/img/default.jpg",
+      "title": "meetjs",
+    },
+  ],
+}
+`;
+
+exports[`can add new items 2`] = `
+Array [
+  Object {
+    "items": Array [
+      Object {
+        "description": "lorem ipsum dolor",
+        "image": "/img/default.jpg",
+        "title": "meetjs",
+      },
+    ],
+  },
+]
+`;

@@ -1,0 +1,53 @@
+name: hello-world
+description: Description of hello-world
+version: 0.0.1
+runtime: nodejs_v8
+
+endpoints:
+  hello:
+    description: Hello world!
+    parameters:
+      firstname:
+        type: string
+        description: First name of the person you want to greet
+        example: Tyler
+      lastname:
+        type: string
+        description: Last name of the person you want to greet
+        example: Durden
+    response:
+      success:
+        description: Success
+        parameters:
+          message:
+            description: Hello message
+        example: |
+          {
+            "message": "Hello Tyler Durden!"
+          }
+      fail:
+        exit_code: 400
+        description: Failed
+        parameters:
+          message:
+            description: Error message
+
+        example: |
+          {
+            "message": "You have to send "firstname" and "lastname" arguments!"
+          }
+
+classes:
+  meetup:
+    - name: title
+      type: string
+    - name: slug
+      type: string
+    - name: description
+      type: text
+    - name: photo
+      type: file
+    - name: date 
+      type: datetime
+    - name: url
+      type: string
