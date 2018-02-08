@@ -1,4 +1,4 @@
-import Server from 'syncano-server'
+import Server from '@syncano/server'
 
 export default (ctx) => {
   const {event, logger, response} = Server(ctx)

@@ -3,6 +3,7 @@ version: 0.1.14
 description: Facebook Messenger Bot
 url: 'https://github.com/eyedea-io/syncano-socket-messenger-bot'
 runtime: nodejs_v8
+
 keywords:
   - messenger
   - facebook
